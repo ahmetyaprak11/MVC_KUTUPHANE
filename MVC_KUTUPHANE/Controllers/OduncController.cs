@@ -14,7 +14,8 @@ namespace MVC_KUTUPHANE.Controllers
         DBKUTUPHANEEntities db = new DBKUTUPHANEEntities();
         public ActionResult Index()
         {
-            return View();
+            var degerler = db.TBLHAREKET.Where(x=>x.ISLEMDURUM==false).ToList();
+            return View(degerler);
         }
         [HttpGet]
         public ActionResult OduncVer()
@@ -22,11 +23,24 @@ namespace MVC_KUTUPHANE.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult KategoriEkle(TBLHAREKET p) 
+        public ActionResult OduncVer(TBLHAREKET p) 
         {
             db.TBLHAREKET.Add(p);
             db.SaveChanges();  
             return View();
+        }
+        public ActionResult Odunciade(int id)
+        {
+            var odn = db.TBLHAREKET.Find(id);
+            return View("Odunciade", odn);
+        }
+        public ActionResult OduncGuncelle(TBLHAREKET p)
+        {
+            var hrk = db.TBLHAREKET.Find(p.ID);
+            hrk.UYEGETIRTARIH = p.UYEGETIRTARIH;
+            hrk.ISLEMDURUM = true;
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }
