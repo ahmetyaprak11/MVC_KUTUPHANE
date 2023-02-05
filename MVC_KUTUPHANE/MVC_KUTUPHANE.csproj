@@ -141,6 +141,7 @@
     <Compile Include="Controllers\OduncController.cs" />
     <Compile Include="Controllers\PersonelController.cs" />
     <Compile Include="Controllers\UyeController.cs" />
+    <Compile Include="Controllers\vitrinController.cs" />
     <Compile Include="Controllers\YazarController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -166,7 +167,13 @@
     <Compile Include="Models\Entity\TBLCEZALAR.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Entity\TBLHAKKIMIZDA.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Entity\TBLHAREKET.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\TBLILETISIM.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Entity\TBLKASA.cs">
@@ -187,6 +194,7 @@
     <Compile Include="Models\Entity\TBLYAZAR.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Siniflarim\Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -197,6 +205,58 @@
     <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="front-end\.gitignore" />
+    <Content Include="front-end\css\freelancer.css" />
+    <Content Include="front-end\css\freelancer.min.css" />
+    <Content Include="front-end\gulpfile.js" />
+    <Content Include="front-end\img\avataaars.svg" />
+    <Content Include="front-end\img\BirYilbasiOykusu.jpg" />
+    <Content Include="front-end\img\droxdeney.jpg" />
+    <Content Include="front-end\img\kasagi.jpg" />
+    <Content Include="front-end\img\library.png" />
+    <Content Include="front-end\img\library3.jpg" />
+    <Content Include="front-end\img\portfolio\cabin.png" />
+    <Content Include="front-end\img\portfolio\cake.png" />
+    <Content Include="front-end\img\portfolio\circus.png" />
+    <Content Include="front-end\img\portfolio\game.png" />
+    <Content Include="front-end\img\portfolio\safe.png" />
+    <Content Include="front-end\img\portfolio\submarine.png" />
+    <Content Include="front-end\index.html" />
+    <Content Include="front-end\js\contact_me.js" />
+    <Content Include="front-end\js\contact_me.min.js" />
+    <Content Include="front-end\js\freelancer.js" />
+    <Content Include="front-end\js\freelancer.min.js" />
+    <Content Include="front-end\js\jqBootstrapValidation.js" />
+    <Content Include="front-end\js\jqBootstrapValidation.min.js" />
+    <Content Include="front-end\mail\contact_me.php" />
+    <Content Include="front-end\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="front-end\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="front-end\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="front-end\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="front-end\vendor\fontawesome-free\css\all.css" />
+    <Content Include="front-end\vendor\fontawesome-free\css\all.min.css" />
+    <Content Include="front-end\vendor\fontawesome-free\css\brands.css" />
+    <Content Include="front-end\vendor\fontawesome-free\css\brands.min.css" />
+    <Content Include="front-end\vendor\fontawesome-free\css\fontawesome.css" />
+    <Content Include="front-end\vendor\fontawesome-free\css\fontawesome.min.css" />
+    <Content Include="front-end\vendor\fontawesome-free\css\regular.css" />
+    <Content Include="front-end\vendor\fontawesome-free\css\regular.min.css" />
+    <Content Include="front-end\vendor\fontawesome-free\css\solid.css" />
+    <Content Include="front-end\vendor\fontawesome-free\css\solid.min.css" />
+    <Content Include="front-end\vendor\fontawesome-free\css\svg-with-js.css" />
+    <Content Include="front-end\vendor\fontawesome-free\css\svg-with-js.min.css" />
+    <Content Include="front-end\vendor\fontawesome-free\css\v4-shims.css" />
+    <Content Include="front-end\vendor\fontawesome-free\css\v4-shims.min.css" />
+    <Content Include="front-end\vendor\fontawesome-free\webfonts\fa-brands-400.svg" />
+    <Content Include="front-end\vendor\fontawesome-free\webfonts\fa-regular-400.svg" />
+    <Content Include="front-end\vendor\fontawesome-free\webfonts\fa-solid-900.svg" />
+    <Content Include="front-end\vendor\jquery-easing\jquery.easing.compatibility.js" />
+    <Content Include="front-end\vendor\jquery-easing\jquery.easing.js" />
+    <Content Include="front-end\vendor\jquery-easing\jquery.easing.min.js" />
+    <Content Include="front-end\vendor\jquery\jquery.js" />
+    <Content Include="front-end\vendor\jquery\jquery.min.js" />
+    <Content Include="front-end\vendor\jquery\jquery.slim.js" />
+    <Content Include="front-end\vendor\jquery\jquery.slim.min.js" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Models\Entity\Model1.Context.tt">
@@ -218,6 +278,40 @@
     <Content Include="Models\Entity\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
+    <Content Include="front-end\.browserslistrc" />
+    <Content Include="front-end\.travis.yml" />
+    <Content Include="front-end\LICENSE" />
+    <Content Include="front-end\package-lock.json" />
+    <Content Include="front-end\package.json" />
+    <Content Include="front-end\README.md" />
+    <Content Include="front-end\scss\base\_page.scss" />
+    <Content Include="front-end\scss\base\_variables.scss" />
+    <Content Include="front-end\scss\components\_buttons.scss" />
+    <Content Include="front-end\scss\components\_divider.scss" />
+    <Content Include="front-end\scss\freelancer.scss" />
+    <Content Include="front-end\scss\layout\_contact.scss" />
+    <Content Include="front-end\scss\layout\_footer.scss" />
+    <Content Include="front-end\scss\layout\_masthead.scss" />
+    <Content Include="front-end\scss\layout\_navbar.scss" />
+    <Content Include="front-end\scss\layout\_portfolio.scss" />
+    <Content Include="front-end\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="front-end\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="front-end\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="front-end\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="front-end\vendor\fontawesome-free\webfonts\fa-brands-400.eot" />
+    <Content Include="front-end\vendor\fontawesome-free\webfonts\fa-brands-400.ttf" />
+    <Content Include="front-end\vendor\fontawesome-free\webfonts\fa-brands-400.woff" />
+    <Content Include="front-end\vendor\fontawesome-free\webfonts\fa-brands-400.woff2" />
+    <Content Include="front-end\vendor\fontawesome-free\webfonts\fa-regular-400.eot" />
+    <Content Include="front-end\vendor\fontawesome-free\webfonts\fa-regular-400.ttf" />
+    <Content Include="front-end\vendor\fontawesome-free\webfonts\fa-regular-400.woff" />
+    <Content Include="front-end\vendor\fontawesome-free\webfonts\fa-regular-400.woff2" />
+    <Content Include="front-end\vendor\fontawesome-free\webfonts\fa-solid-900.eot" />
+    <Content Include="front-end\vendor\fontawesome-free\webfonts\fa-solid-900.ttf" />
+    <Content Include="front-end\vendor\fontawesome-free\webfonts\fa-solid-900.woff" />
+    <Content Include="front-end\vendor\fontawesome-free\webfonts\fa-solid-900.woff2" />
+    <Content Include="front-end\vendor\jquery\jquery.min.map" />
+    <Content Include="front-end\vendor\jquery\jquery.slim.min.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -263,6 +357,7 @@
     <Content Include="Views\Odunc\Index.cshtml" />
     <Content Include="Views\Odunc\Odunciade.cshtml" />
     <Content Include="Views\islem\Index.cshtml" />
+    <Content Include="Views\vitrin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
