@@ -29,9 +29,13 @@ namespace MVC_KUTUPHANE.Controllers
             db.SaveChanges();  
             return View();
         }
-        public ActionResult Odunciade(int id)
+        public ActionResult Odunciade(TBLHAREKET p)
         {
-            var odn = db.TBLHAREKET.Find(id);
+            var odn = db.TBLHAREKET.Find(p.ID);
+            DateTime d1 = DateTime.Parse(odn.IADETARIH.ToString());
+            DateTime d2 = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            TimeSpan d3 = d2 - d1;
+            ViewBag.dg1 = d3.TotalDays;
             return View("Odunciade", odn);
         }
         public ActionResult OduncGuncelle(TBLHAREKET p)
