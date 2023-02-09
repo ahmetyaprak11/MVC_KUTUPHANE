@@ -142,6 +142,7 @@
     <Compile Include="Controllers\KitapController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\OduncController.cs" />
+    <Compile Include="Controllers\PanelimController.cs" />
     <Compile Include="Controllers\PersonelController.cs" />
     <Compile Include="Controllers\UyeController.cs" />
     <Compile Include="Controllers\vitrinController.cs" />
@@ -274,6 +275,10 @@
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="webpanel\assets\favicon.ico" />
+    <Content Include="webpanel\css\styles.css" />
+    <Content Include="webpanel\index.html" />
+    <Content Include="webpanel\js\scripts.js" />
     <Content Include="web2\css\bootstrap.css" />
     <Content Include="web2\css\clndr.css" />
     <Content Include="web2\css\jqvmap.css" />
@@ -532,6 +537,8 @@
     <Content Include="webregister\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Views\Login\GirisYap.cshtml" />
     <Content Include="Views\KayitOl\Kayit.cshtml" />
+    <Content Include="Views\Shared\_LayoutPanel.cshtml" />
+    <Content Include="Views\Panelim\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
