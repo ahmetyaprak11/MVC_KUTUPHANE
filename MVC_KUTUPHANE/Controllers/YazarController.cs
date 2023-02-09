@@ -51,5 +51,10 @@ namespace MVC_KUTUPHANE.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult YazarKitaplar(int id)
+        {
+            var yazar = db.TBLKITAP.Where(x => x.YAZAR == id).ToList();
+            return View(yazar);
+        }
     }
 }
