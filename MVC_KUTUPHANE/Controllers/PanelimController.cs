@@ -33,5 +33,10 @@ namespace MVC_KUTUPHANE.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult Kitaplarim()
+        {
+            var degerler = db.TBLHAREKET.Where(x => x.ISLEMDURUM == true).ToList();
+            return View(degerler);
+        }
     }
 }
