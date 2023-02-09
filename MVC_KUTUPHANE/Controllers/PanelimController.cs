@@ -35,7 +35,9 @@ namespace MVC_KUTUPHANE.Controllers
         }
         public ActionResult Kitaplarim()
         {
-            var degerler = db.TBLHAREKET.Where(x => x.ISLEMDURUM == true).ToList();
+            var kullanici = (string)Session["Mail"];
+            var id = db.TBLUYELER.Where(x=>x.MAIL == kullanici.ToString()).Select(z => z.ID).FirstOrDefault();
+            var degerler = db.TBLHAREKET.Where(x => x.UYE == id).ToList();
             return View(degerler);
         }
     }
