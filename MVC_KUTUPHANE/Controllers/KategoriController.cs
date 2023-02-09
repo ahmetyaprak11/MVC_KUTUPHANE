@@ -13,7 +13,7 @@ namespace MVC_KUTUPHANE.Controllers
         DBKUTUPHANEEntities db = new DBKUTUPHANEEntities(); // Modelimize ait yeni bir nesne oluşturuyoruz. Bunu db adlı değişkene atıyoruz. Tablomuza ulaşmamızı sağlıyor.   
         public ActionResult Index()
         {
-            var degerler = db.TBLKATEGORI.ToList(); //Kategori tablomuzdaki değerleri bize liste şeklinde getirmeyi sağladık. "degerler" adlı değişkene atadık. 
+            var degerler = db.TBLKATEGORI.Where(x => x.DURUM == true).ToList(); //Kategori tablomuzdaki değerleri bize liste şeklinde getirmeyi sağladık. "degerler" adlı değişkene atadık. 
             return View(degerler); // Daha sonra bu "degerler" i bize döndürmesini istedik.
         }
         [HttpGet]
@@ -30,8 +30,9 @@ namespace MVC_KUTUPHANE.Controllers
         }
         public ActionResult KategoriSil(int id)
         {
-            var silincek = db.TBLKATEGORI.Find(id);
-            db.TBLKATEGORI.Remove(silincek);
+            var kategori = db.TBLKATEGORI.Find(id);
+            // db.TBLKATEGORI.Remove(kategori);
+            kategori.DURUM = false;
             db.SaveChanges();
             return RedirectToAction("Index");
         }
