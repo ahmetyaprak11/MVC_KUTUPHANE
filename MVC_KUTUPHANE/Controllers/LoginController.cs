@@ -7,6 +7,7 @@ using MVC_KUTUPHANE.Models.Entity;
 using System.Web.Security;
 namespace MVC_KUTUPHANE.Controllers
 {
+    [AllowAnonymous]
     public class LoginController : Controller
     {
         // GET: Login
