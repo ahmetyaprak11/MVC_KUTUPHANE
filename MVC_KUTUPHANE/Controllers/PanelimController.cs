@@ -40,5 +40,15 @@ namespace MVC_KUTUPHANE.Controllers
             var degerler = db.TBLHAREKET.Where(x => x.UYE == id).ToList();
             return View(degerler);
         }
+        public ActionResult Duyurular()
+        {
+            var duyurulistesi = db.TBLDUYURULAR.ToList();
+            return View(duyurulistesi);
+        }
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("GirisYap","Login");
+        }
     }
 }
